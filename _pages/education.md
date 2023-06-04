@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-* ## PES University - Bangalore (Aug 2018 - Aug 2022)
+## PES University - Bangalore (Aug 2018 - Aug 2022)
     * B. Tech with Honours in Computer Science and Engineering
     * CGPA: 9.54/10 (Top 5%)
     * Acquired Specialization in Systems and Core Computing
@@ -35,10 +35,10 @@ author_profile: true
         * Performance Engineering
         * Advanced Java
 
-* ## RV PU College - Bangalore (May 2016 - April 2018)
+## RV PU College - Bangalore (May 2016 - April 2018)
     * 2nd PU State Boards: 95.33%
     * KCET State Rank: 276
 
-* ## Carmel School - Bangalore (June 2006 - April 2016)
+## Carmel School - Bangalore (June 2006 - April 2016)
     * ICSE Boards: 96.83%
 
