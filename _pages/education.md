@@ -13,8 +13,27 @@ author_profile: true
     * Acquired Specialization in Systems and Core Computing
     * Received the CNR Rao Merit Scholarship in every Semester
     * Important Courses:
-        * Data Structures and Algorithms
-        * Operating System
+        * Introduction to Computing using Python
+        * Problem Solving with C
+        * Digital Design and Computer Organization
+        * Data Structures
+        * Programming with C++
+        * Design and Analysis of Algorithms
+        * Database Management Systems
+        * Microprocessor and Computer Architecture
+        * Theory of Computation
+        * Fine Techniques
+        * Computer Networks
+        * Operating Systems
+        * Fine Techniques - II
+        * Advanced Algorithms
+        * Big Data
+        * Generic Programming
+        * Design Patterns
+        * Compiler Design
+        * Cloud Computing
+        * Performance Engineering
+        * Advanced Java
 
 * ## RV PU College - Bangalore (May 2016 - April 2018)
     * 2nd PU State Boards: 95.33%
