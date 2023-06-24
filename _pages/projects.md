@@ -35,4 +35,4 @@ Introduction
 
 
 The link to the test video is as follows: 
-<a href="/experience/#test_video_demo">Video Demo</a>
+<a href="/experience/#test_video_demo" target="_top">Video Demo</a>
