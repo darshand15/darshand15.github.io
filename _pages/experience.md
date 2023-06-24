@@ -38,9 +38,13 @@ Introduction
 
   * The video demo is as follows:
   <video width="320" height="240" controls>
-    <source src="Test_Video.mov" type="video/mov">
+    <source src="/video/Test_Video.mov" type="video/mov">
   Your browser does not support the video tag.
   </video>
+
+
+  * The sample pdf report is as follows:
+  [Sample Report](http://academicpages.github.io/files/paper3.pdf)
 
   * Under the guidance and mentorship of MSSK Sharma (Head of Part / Director, IoT App, SRI-Bangalore) and Neeraj Pandey (Senior Chief Engineer, IoT App, SRI-Bangalore)
 
