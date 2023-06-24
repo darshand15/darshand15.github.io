@@ -36,6 +36,14 @@ Introduction
   <img src='/images/Smart_Things_Solution.png'>
   <!---![Smart Things Solution](darshand15.github.io/images/Smart_Things_Solution.png) ---> 
   
+<style>
+  video:target
+  {
+    outline:none;
+    border:none;
+  }
+</style>  
+
   * The video demo is as follows:
   <video id="test_video_demo" width="320" height="240" controls>
     <source src="/videos/Test_Video.mov" type="video/mp4">
