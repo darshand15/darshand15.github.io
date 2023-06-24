@@ -37,7 +37,7 @@ Introduction
   <!---![Smart Things Solution](darshand15.github.io/images/Smart_Things_Solution.png) ---> 
   
   * The video demo is as follows:
-  <video id="test_video_demo" width="320" height="240" controls>
+  <video id="test_video_demo" width="320" height="320" controls>
     <source src="/videos/Test_Video.mov" type="video/mp4">
   Your browser does not support the video tag.
   </video>
