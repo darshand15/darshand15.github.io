@@ -35,10 +35,10 @@ Introduction
   * The proposed solution is as follows:
   <img src='/images/Smart_Things_Solution.png'>
   <!---![Smart Things Solution](darshand15.github.io/images/Smart_Things_Solution.png) ---> 
-
+  
   * The video demo is as follows:
   <video width="320" height="240" controls>
-    <source src="/videos/Test_Video.mov" type="video/mov">
+    <source src="/videos/Test_Video.mov" type="video/mp4">
   Your browser does not support the video tag.
   </video>
 
