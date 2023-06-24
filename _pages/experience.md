@@ -36,6 +36,12 @@ Introduction
   <img src='/images/Smart_Things_Solution.png'>
   <!---![Smart Things Solution](darshand15.github.io/images/Smart_Things_Solution.png) ---> 
 
+  * The video demo is as follows:
+  <video width="320" height="240" controls>
+    <source src="Test_Video.mov" type="video/mov">
+  Your browser does not support the video tag.
+  </video>
+
   * Under the guidance and mentorship of MSSK Sharma (Head of Part / Director, IoT App, SRI-Bangalore) and Neeraj Pandey (Senior Chief Engineer, IoT App, SRI-Bangalore)
 
 ## Centre for Data Science and Applied Machine Learning, PES University - Bangalore (May 2019 - July 2019)
