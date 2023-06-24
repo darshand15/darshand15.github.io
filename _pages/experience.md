@@ -33,7 +33,7 @@ Introduction
     * Switching to the Smart Things Application and controlling the devices as required in the case of smart devices
   * These solutions are tedious, time-consuming and inefficient. Moreover, they disrupt the user's participation in the video call/meeting.
   * The proposed solution is as follows:
-
+  ![Smart Things Solution](/images/Smart_Things_Solution.png)  
 
   * Under the guidance and mentorship of MSSK Sharma (Head of Part / Director, IoT App, SRI-Bangalore) and Neeraj Pandey (Senior Chief Engineer, IoT App, SRI-Bangalore)
 
