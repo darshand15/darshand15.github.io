@@ -38,7 +38,7 @@ Introduction
 
   * The video demo is as follows:
   <video width="320" height="240" controls>
-    <source src="/video/Test_Video.mov" type="video/mov">
+    <source src="/videos/Test_Video.mov" type="video/mov">
   Your browser does not support the video tag.
   </video>
 
