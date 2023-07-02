@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Projects"
-permalink: /projects/Capstone_project
+permalink: /_projects/Capstone_project
 author_profile: true
 ---
 
