@@ -1,6 +1,7 @@
 ---
 layout: archive
-title: "Projects"
+collection: projects
+title: "Capstone Project"
 permalink: /_projects/Capstone_project
 author_profile: true
 ---
