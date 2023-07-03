@@ -11,7 +11,7 @@ Introduction
 
 <!---!<a href="/_projects/Capstone_project.md"> Capstone Project </a>---> 
 
-{% for post in site.publications reversed %}
+{% for post in site.projects reversed %}
   {% include archive-single.html %}
 {% endfor %}
 
