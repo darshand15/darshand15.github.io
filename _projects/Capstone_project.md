@@ -1,8 +1,7 @@
 ---
-layout: archive
 collection: projects
 title: "Capstone Project"
-permalink: /_projects/Capstone_project
+permalink: /projects/Capstone_project
 author_profile: true
 ---
 
