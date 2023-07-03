@@ -9,11 +9,13 @@ author_profile: true
 
 Introduction
 
-<!---!<a href="/_projects/Capstone_project.md"> Capstone Project </a>---> 
+<a href="/projects/Capstone_project"> Capstone Project </a>
 
+<!---!
 {% for post in site.projects reversed %}
   {% include archive-single.html %}
 {% endfor %}
+---> 
 
 ## Automated Parallelization of Source Code using Program Comprehension
   * A Research Project aimed at exploring methods to improve the performance of sequential source code by automatically converting it to its parallel equivalent, thereby ensuring efficient utilization of the underlying hardware
