@@ -5,16 +5,18 @@ permalink: /projects/
 author_profile: true
 ---
 
-<a href="/projects/Capstone_project"> Capstone Project </a>
 
 
 <!---!
 {% for post in site.projects reversed %}
   {% include archive-single.html %}
 {% endfor %}
- 
+--->
 
 Introduction
+
+<a href="/projects/Capstone_project"> Capstone Project </a>
+
 ## Automated Parallelization of Source Code using Program Comprehension
   * A Research Project aimed at exploring methods to improve the performance of sequential source code by automatically converting it to its parallel equivalent, thereby ensuring efficient utilization of the underlying hardware
   * Implemented Intra-Function and Inter-Function Parallelism
@@ -71,4 +73,3 @@ Introduction
 
 The link to the test video is as follows: 
 <a href="/experience/#test_video_demo" target="_top">Video Demo</a>
---->
