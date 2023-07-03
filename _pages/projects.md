@@ -8,6 +8,7 @@ author_profile: true
 Introduction
 
 <a href="/projects/Capstone_project"> Capstone Project </a>
+[Capstone Project 2](/projects/Capstone_project)
 
 <!---!
 {% for post in site.projects reversed %}
