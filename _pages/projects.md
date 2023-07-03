@@ -9,6 +9,7 @@ Introduction placeholder
 
 <a href="/projects/Capstone_project">Automated Parallelization of Source Code using Program Comprehension </a>
 
+## Automated Parallelization of Source Code using Program Comprehension
   * A Research Project aimed at exploring methods to improve the performance of sequential source code by automatically converting it to its parallel equivalent, thereby ensuring efficient utilization of the underlying hardware
   * Implemented Intra-Function and Inter-Function Parallelism
   * Intra-Function parallelism was implemented using the concept of program comprehension that enabled us to identify the intent and the algorithm implemented in a particular code section and consequently replace it with the optimized parallel version based on the defined mapping in the backend database
