@@ -5,15 +5,7 @@ permalink: /projects/
 author_profile: true
 ---
 
-
-
-<!---!
-{% for post in site.projects reversed %}
-  {% include archive-single.html %}
-{% endfor %}
---->
-
-Introduction
+Introduction placeholder
 
 <a href="/projects/Capstone_project"> Capstone Project </a>
 
@@ -73,3 +65,10 @@ Introduction
 
 The link to the test video is as follows: 
 <a href="/experience/#test_video_demo" target="_top">Video Demo</a>
+
+
+<!---!
+{% for post in site.projects reversed %}
+  {% include archive-single.html %}
+{% endfor %}
+--->
