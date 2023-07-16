@@ -187,6 +187,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+  experience:
+    output: true
+    permalink: /:collection/:path/
   talks:
     output: true
     permalink: /:collection/:path/
@@ -243,6 +246,14 @@ defaults:
   - scope:
       path: ""
       type: projects
+    values:
+      layout: single
+      author_profile: true
+      comment: true
+  # _experience
+  - scope:
+      path: ""
+      type: experience
     values:
       layout: single
       author_profile: true
