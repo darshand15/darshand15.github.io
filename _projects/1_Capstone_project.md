@@ -33,7 +33,7 @@ The below flowchart gives an overview of the implemented project:
 
 <img src='/images/Capstone_Project_Overview.png'>
 
-# Program Comprehension Phase
+### Program Comprehension Phase
  * The input source code is represented as Vector Embeddings
  * The similarities between the vector embeddings of different programs is found to group them into clusters
  * Each of the clusters correspond to a previously defined category that has a mapped parallel version in the backend database
@@ -42,7 +42,7 @@ The below flowchart gives an overview of the implemented project:
  * The "Others" Category is introduced to ensure correctness of the program by avoiding any misclassification
  * Additionally, this phase involves the generation of an enriched Abstract Syntax Tree and its use to perform data-dependency, control and data-flow analysis which are pre-requisites for the parallelization phase
 
-# Parallelization Phase
+### Parallelization Phase
  * This phase involved the utilization of all the generated information and analysis regarding the program to perform parallelization
  * There were 4 different approaches that were experimented with and researched upon:
     * Parallelism by AST Querying and OpenMP Directives
