@@ -53,6 +53,6 @@ The below flowchart gives an overview of the implemented project:
 
 ## Conclusion
 
-The project succesfully achieved the research and development of techniques to automatically convert the sequential source code to its functionally accurate parallel equivalent with a substantial performance speedup (upto 500 times for larger data), thereby ensuring the efficient and effective utilization of the underlying hardware resources. 
+The project succesfully achieved the research and development of techniques to automatically convert the sequential source code to its functionally accurate parallel equivalent with a substantial performance speedup (upto 500 times for larger data), thereby enabling the efficient and effective utilization of the underlying hardware resources. 
 
 Links to Video Demo, Report, Code Repository, Paper draft, ...
