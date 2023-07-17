@@ -5,7 +5,7 @@ collection: projects
 
 ## Summary
 
-A Research exploration aimed at exploring methods to improve the performance of sequential source code by automatically converting it to its functionally accurate parallel equivalent by implementing Intra-Function and Inter-Function Parallelism, thereby ensuring effective and efficient utilization of the underlying hardware resources.
+A Research exploration aimed at exploring methods to improve the performance of sequential source code by automatically converting it to its functionally accurate parallel equivalent by implementing Intra-Function and Inter-Function Parallelism, thereby ensuring effective and efficient utilization of the underlying hardware resources. This project was implemented as part of the Capstone Project during my Undergraduate Study.
 
 ## Abstract
 
