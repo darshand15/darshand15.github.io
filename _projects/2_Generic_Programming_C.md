@@ -65,3 +65,5 @@ The Max algorithm takes in a pair of iterators (first and last), a variable (max
 **Accumulate**
 
 The Accumulate algorithm takes in a pair of iterators (first and last) and a variable (acc) that holds the accumulated value. The functionality of the accumulate algorithm mandates that these iterators are of type Input Iterator and above. The accumulate function traverses the container until the first iterator points to the last iterator, accumulating the keys that are found in this range. The accumulated value is stored in the acc variable.
+
+Links to Video Demo, Report, Readme, ...
