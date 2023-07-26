@@ -12,7 +12,7 @@ collection: projects
  * The process of transaction is not a very transparent one and it often involves dishonest and malicious intent and underhand dealings which should be prevented at all costs.
  * It is imperative that these processes are made more efficient and transparent given that it is a matter of life and death
 
- ## Our Solution
+## Our Solution
 
 The project aimed at solving the above problems by implmenting a solution in the following manner:
  * The patient records are stored in a digitalised, decentralized, transparent and secure manner using the revolutionary technology of blockchain.
@@ -23,12 +23,9 @@ The project aimed at solving the above problems by implmenting a solution in the
     * The hospitals to query information about available organs/blood across all vendors/donation banks that are a part of the network, and carry out the transaction
  
 The above-mentioned solution addresses and solves the various problems that are inherent to the healthcare industry related to the management of patient records and the transaction of blood and organs in the following manner:
-
-A completely decentralized system with data stored cryptographically ensures data is available to everyone with the right permissions
-● Data stored in the form of blockchains are immutable, meaning no one can tamper with the data with malicious intent
-● More efficient way for large hospitals to manage thousands of patient records with years of history, enabling better diagnosis with complete data available
- 
-Using Blockchain, all intermediate transaction costs between the hospitals and the donation banks are cut down, since all transactions are completely free and transparent(the complete history of any transaction is available to all)
-● Transactions are confirmed based on the availability and not based on name of the hospital or any such preferred choices
-● However impartial parameters such as proximity, price are considered before a transaction is confirmed
-● Since any transaction can be viewed, this makes pricing transparent and thus prevents horrendous price tags(which is quite common in times of emergencies)
+ * A completely decentralized system with data stored cryptographically ensures that the data is only accessible with the right permissions
+ * Data stored in the form of blockchains are immutable, implying that it cannot be tampered with by anyone for malicious purposes.
+ * This is a more efficient way for large hospitals to manage thousands of patient records with years of history, thereby enabling better diagnosis and treatment
+ * Through the use of Blockchain, all the intermediate transaction costs between the hospitals and the donation banks are eliminated since all the transactions are completely free and transparent (the complete history of any transaction is available to everyone)
+ * Transactions are confirmed based on the availability and not based on the name of the hospital or any such preferred choices which would otherwise lead to unfair bias
+ * As any transaction can be viewed, it makes pricing the transparent and thus prevents horrendous price tags and the resultant exploitation of the helpless patients (which is quite common especially in times of emergencies)
