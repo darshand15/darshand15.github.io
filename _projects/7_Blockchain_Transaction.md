@@ -14,7 +14,7 @@ collection: projects
 
 ## Our Solution
 
-The project aimed at solving the above problems by implmenting a solution in the following manner:
+The project addressed and solved the above problems by implmenting a solution in the following manner:
  * The patient records are stored in a digitalised, decentralized, transparent and secure manner using the revolutionary technology of blockchain.
  * All the details necessary for organ/blood transactions are also stored in the format of blockchains, enabling clean and hassle-free experiences
  * A Progressive Web Application (PWA) is used by:
@@ -29,3 +29,5 @@ The above-mentioned solution addresses and solves the various problems that are 
  * Through the use of Blockchain, all the intermediate transaction costs between the hospitals and the donation banks are eliminated since all the transactions are completely free and transparent (the complete history of any transaction is available to everyone)
  * Transactions are confirmed based on the availability and not based on the name of the hospital or any such preferred choices which would otherwise lead to unfair bias
  * As any transaction can be viewed, it makes pricing the transparent and thus prevents horrendous price tags and the resultant exploitation of the helpless patients (which is quite common especially in times of emergencies)
+
+## Implementation Details
