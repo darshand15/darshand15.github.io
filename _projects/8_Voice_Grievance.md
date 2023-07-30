@@ -28,4 +28,8 @@ The project addressed and solved the above problems by implementing a solution i
 
 ## Implementation Details
 
- * 
+ * The project involved the implementation of an Android mobile application that can accept the user grievances and complaints in voice and text format.
+ * In the case of voice complaints, the project involved the implementation and use of a voice to text conversion algorithm.
+ * The complaints in text format are then tokenized and mapped to the respective departments using the concepts of Natural Language Processing (NLP).
+ * Further, the complaints reaching a particular department are ranked based on severity and the time-critical nature which is again deduced from the complaint using the concepts of NLP.
+ * The project also involved the implementation of a front-end website for the departments to ensure that these complaints are ranked and displayed to the respective departments. The App on the user side and the website on the department side were completely integrated into an end-to-end pipeline to ensure that the complaints voiced on the app undergo the processing using NLP to finally rank and display the complaints to the respective department on their website.
