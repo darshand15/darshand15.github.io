@@ -5,11 +5,11 @@ collection: projects
 
 ## Summary
 
-A project aimed at implementing a centralised scheduling framework maintaining a master node and multiple worker nodes, all simulated as different processes on a single machine. The Master node receives job requests, which are scheduled on multiple slots across the available worker machines. The Master process consists of separate threads to listen to requests, to schedule map and reduce tasks and to listen to job completion information from workers, whereas the Worker process listens to job allocation information and simulates execution. The job requests consist of map and reduce tasks with the dependency that the reduce tasks be executed only after the completion of the corresponding map tasks. The project involved the implementation of 3 different scheduling algorithms, namely Least loaded, Round robin and Randomised Scheduling algorithms. This project was implemented as part of the Big Data Course during my Undergraduate Study. 
+A project aimed at implementing a centralised scheduling framework that maintains and manages a master node and multiple worker nodes, all simulated as different processes on a single machine. The Master node receives job requests, which are scheduled on multiple slots across the available worker machines. The Master process consists of separate threads to listen to requests, to schedule map and reduce tasks and to listen to job completion information from workers. The Worker process listens to job allocation information and simulates execution. The job requests consist of map and reduce tasks with the dependency that the reduce tasks be executed only after the completion of the corresponding map tasks. The project involved the implementation of 3 different scheduling algorithms, namely Least loaded, Round robin and Randomised Scheduling algorithms. This project was developed and implemented as part of the Big Data Course during my Undergraduate Study. 
 
 ## Implementation Details
 
-The project involved the implementation of two python programs - master.py and worker.py which perform the functions of the Master and a Worker machine respectively. These programs are independent of each other and can run on separate machines too, if required.
+The project involved the implementation of two python programs - master.py and worker.py which perform the functions of the Master and a Worker machine respectively. These programs are independent of each other and can run on separate machines if required.
 
 ### master.py
 

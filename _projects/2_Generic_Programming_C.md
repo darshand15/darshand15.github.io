@@ -5,7 +5,7 @@ collection: projects
 
 ## Summary
 
-A project aimed at implementing Generic Programming features as a design pattern in C, using pre-processor directives. This project involved the implementation of generic containers like list, stack, queue, vector and hashmap, iterators for each of these containers and generic algorithms like find, find_if, count, count_if, min, max, accumulate that make use of these iterators. This project was implemented as part of the Design Patterns Course during my Undergraduate Study.
+A project aimed at implementing Generic Programming features as a design pattern in C, using pre-processor directives. This project involved the implementation of generic containers like list, stack, queue, vector and hashmap, iterators for each of these containers and generic algorithms like find, find_if, count, count_if, min, max, accumulate that make use of these iterators. This project was developed and implemented as part of the Design Patterns Course during my Undergraduate Study.
 
 ## Implementation Details
 

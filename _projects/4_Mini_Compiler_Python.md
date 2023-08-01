@@ -5,7 +5,7 @@ collection: projects
 
 ## Summary
 
-A project aimed at implementing a mini compiler for the Python programming language supporting the different phases of a typical compiler, namely lexical analysis, syntax analysis, semantic analysis, intermediate code generation and intermediate code optimization. The mini compiler implemented as part of this project supports the if, if-else, if-elif-else and for constructs, arithmetic, relational and logical operators, keywords, identifiers and various other features along with error detection and error handling mechanisms. This project was implemented as part of the Compiler Design Course during my Undergraduate Study.
+A project aimed at implementing a mini compiler for the Python programming language that supports the different phases of a typical compiler, namely lexical analysis, syntax analysis, semantic analysis, intermediate code generation and intermediate code optimization. The mini compiler implemented as part of this project supports the if, if-else, if-elif-else and for constructs, arithmetic, relational and logical operators, keywords, identifiers and various other features along with error detection and error handling mechanisms. This project was developed and implemented as part of the Compiler Design Course during my Undergraduate Study.
 
 ## Implementation Details
 
