@@ -3,6 +3,14 @@ title: "Automated Parallelization of Source Code using Program Comprehension"
 collection: projects
 ---
 
+<style>
+  video:target
+  {
+    outline:none;
+    border:none;
+  }
+</style> 
+
 ## Summary
 
 A Research exploration aimed at exploring methods to improve the performance of sequential source code by automatically converting it to its functionally accurate parallel equivalent by implementing Intra-Function and Inter-Function Parallelism, thereby ensuring effective and efficient utilization of the underlying hardware resources. This project was developed and implemented as part of the Capstone Project during my Undergraduate Study.
@@ -53,6 +61,13 @@ The below flowchart gives an overview of the implemented project:
 
 ## Conclusion
 
-The project succesfully achieved the research and development of techniques to automatically convert the sequential source code to its functionally accurate parallel equivalent with a substantial performance speedup (up to 500 times for larger data), thereby enabling the efficient and effective utilization of the underlying hardware resources. 
+The project succesfully achieved the research and development of techniques to automatically convert the sequential source code to its functionally accurate parallel equivalent with a substantial performance speedup (up to 500 times for larger data), thereby enabling the efficient and effective utilization of the underlying hardware resources.
+
+## Video Demo
+  
+<video id="Capstone_video_demo" width="320" height="240" controls>
+   <source src="/videos/Capstone_Project_Demo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 Links to Video Demo, Report, Code Repository, Paper draft, ...
