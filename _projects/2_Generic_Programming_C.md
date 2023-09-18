@@ -3,6 +3,14 @@ title: "Generic Programming in C"
 collection: projects
 ---
 
+<style>
+  video:target
+  {
+    outline:none;
+    border:none;
+  }
+</style>
+
 ## Summary
 
 A project aimed at implementing Generic Programming features as a design pattern in C, using pre-processor directives. This project involved the implementation of generic containers like list, stack, queue, vector and hashmap, iterators for each of these containers and generic algorithms like find, find_if, count, count_if, min, max, accumulate that make use of these iterators. This project was developed and implemented as part of the Design Patterns Course during my Undergraduate Study.
@@ -65,5 +73,13 @@ The Max algorithm takes in a pair of iterators (first and last), a variable (max
 **Accumulate**
 
 The Accumulate algorithm takes in a pair of iterators (first and last) and a variable (acc) that holds the accumulated value. The functionality of the accumulate algorithm mandates that these iterators are of type Input Iterator and above. The accumulate function traverses the container until the first iterator points to the last iterator, accumulating the keys that are found in this range. The accumulated value is stored in the acc variable.
+
+## Video Demo
+  
+<video id="DP_Project_video_demo" width="320" height="240" controls>
+   <source src="/videos/DP_Project_Demo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 
 Links to Video Demo, Report, Readme, ...
