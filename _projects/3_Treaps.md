@@ -3,6 +3,14 @@ title: "Implementation of Treaps"
 collection: projects
 ---
 
+<style>
+  video:target
+  {
+    outline:none;
+    border:none;
+  }
+</style>
+
 ## Summary
 
 A project aimed at implementing Treap as a generic data structure along with the different functionalities of a treap. Treap is a data structure that stores pairs (say [X,Y]) in a binary tree such that it is a binary search tree by X and a binary heap by Y. In such an implementation, the X values are the keys while the Y values are the priorities that specify how the tree is constructed. In this project, the priorities are randomized, thereby using Randomization and the Binary Heap property (specifically, the max heap property in our implementation) to construct a randomized balanced binary search tree that maintains balance with high probability. The entire treap and its individual nodes were built as generic canonical classes, thereby supporting all the different data types. The project involved the implementation of multiple operations such as insert node, delete node, split treap, merge two treaps, union, intersection, difference and traversal of treaps. A bidirectional iterator was implemented as a nested class within the treap class. Multiple member algorithms such as find and replace were implemented for treaps. This project was developed and implemented as part of the Generic Programming Course during my Undergraduate Study.
@@ -81,5 +89,13 @@ A few member algorithms have been implemented as follows:
  * **Member Replace**: If the generic replace algorithm is called on treap, once the key of a node is replaced with a new key, the binary search tree property and the max heap property of the treap may be broken. The member replace algorithm replaces the key with the new key value mentioned by doing the following. It first deletes the node containing the old key value. It then inserts a new node with the new key value. The insert function takes care of all the rotations to ensure that the binary search tree property and the max heap property of the treap are maintained.
 
 Further, different generic algorithms can be invoked for the treap by utilizing the iterators of the treap.
+
+## Video Demo
+  
+<video id="GP_Project_video_demo" width="320" height="240" controls>
+   <source src="/videos/GP_Project_Demo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 
 Link to video demo, report, readme, ..
