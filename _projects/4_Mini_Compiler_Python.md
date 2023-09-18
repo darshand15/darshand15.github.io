@@ -3,6 +3,14 @@ title: "Mini Compiler for Python"
 collection: projects
 ---
 
+<style>
+  video:target
+  {
+    outline:none;
+    border:none;
+  }
+</style>
+
 ## Summary
 
 A project aimed at implementing a mini compiler for the Python programming language that supports the different phases of a typical compiler, namely lexical analysis, syntax analysis, semantic analysis, intermediate code generation and intermediate code optimization. The mini compiler implemented as part of this project supports the if, if-else, if-elif-else and for constructs, arithmetic, relational and logical operators, keywords, identifiers and various other features along with error detection and error handling mechanisms. This project was developed and implemented as part of the Compiler Design Course during my Undergraduate Study.
@@ -56,3 +64,13 @@ The following error detection and handling strategies have been implemented as p
  * If the length of an identifier exceeds 79 characters, an error message prompting this is shown to the user and the identifier is truncated to the first 79 characters.
  * If an undeclared variable is used as part of an expression, a syntax error is thrown prompting the use of an undeclared variable.
  * If an invalid operator like the increment, decrement operator, etc is used as part of an expression, a syntax error is thrown.
+
+## Video Demo
+  
+<video id="CD_Project_video_demo" width="320" height="240" controls>
+   <source src="/videos/CD_Project_Demo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+Link to video demo, report, readme, ..
