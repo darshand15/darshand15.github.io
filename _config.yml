@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Darshan D"
-  avatar           : "profile.png"
+  avatar           : "Darshan_D_Photo.jpg"
   bio              : "Advanced Developer for 6G Lab, Samsung Research"
   location         : "Bangalore, India"
   employer         :
@@ -193,6 +193,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  blogs:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
@@ -266,6 +269,14 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+  # _blogs
+  - scope:
+      path: ""
+      type: blogs
+    values:
+      layout: single
+      author_profile: true
+      comment: true
 
 # Sass/SCSS
 sass:
