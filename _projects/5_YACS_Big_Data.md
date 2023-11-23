@@ -5,11 +5,11 @@ collection: projects
 
 ## Summary
 
-A project aimed at implementing a centralised scheduling framework that maintains and manages a master node and multiple worker nodes, all simulated as different processes on a single machine. The Master node receives job requests, which are scheduled on multiple slots across the available worker machines. The Master process consists of separate threads to listen to requests, to schedule map and reduce tasks and to listen to job completion information from workers. The Worker process listens to job allocation information and simulates execution. The job requests consist of map and reduce tasks with the dependency that the reduce tasks be executed only after the completion of the corresponding map tasks. The project involved the implementation of 3 different scheduling algorithms, namely Least loaded, Round robin and Randomised Scheduling algorithms. This project was developed and implemented as part of the Big Data Course during my Undergraduate Study. 
+A project aimed at implementing a centralized scheduling framework that maintains and manages a master node and multiple worker nodes, all simulated as different processes on a single machine. The Master node receives job requests, which are scheduled on multiple slots across the available worker machines. The Master process consists of separate threads to listen to requests, to schedule map, and reduce tasks, and to listen to job completion information from workers. The Worker process listens to job allocation information and simulates execution. The job requests consist of map and reduce tasks with the dependency that the reduce tasks be executed only after the completion of the corresponding map tasks. The project involved the implementation of 3 different scheduling algorithms, namely Least loaded, Round robin, and Randomised Scheduling algorithms. This project was developed and implemented as part of the Big Data Course during my Undergraduate Study. 
 
 ## Implementation Details
 
-The project involved the implementation of two python programs - master.py and worker.py which perform the functions of the Master and a Worker machine respectively. These programs are independent of each other and can run on separate machines if required.
+The project involved the implementation of two Python programs - master.py and worker.py which perform the functions of the Master and a Worker machine respectively. These programs are independent of each other and can run on separate machines if required.
 
 ### master.py
 
@@ -19,7 +19,7 @@ This program essentially consists of 4 separate threads to carry out the followi
  3. **ReduceTaskScheduler**: Schedules the reduce tasks on the workers
  4. **WorkerManager**: Listens to job completion updates from the workers
 
-It also contains the implementation of the 3 scheduling algorithms (Random, Round-Robin and Least Loaded).
+It also contains the implementation of the 3 scheduling algorithms (Random, Round-Robin, and Least Loaded).
 
 The JobListener thread performs the following tasks in order:
  * Listen to incoming job requests through specified port (in this case, port 5000).
@@ -50,17 +50,17 @@ The important events with corresponding timestamps logged are as follows:
 
 ### worker.py
 
-This program simulates the working of the Worker machines. The same program is run multiple times simultaneously to simulate the simultaneous running of multiple Worker machines. This program essentially listens to the job allocation information from the master (on one thread, with a specified port number), simulates the execution of these tasks by decrementing the task duration and sleeping for 1 second (on a second thread). Meanwhile, it continues to listen to the Master (on the other thread), while each of the slots continue executing their tasks.
+This program simulates the working of the Worker machines. The same program is run multiple times simultaneously to simulate the simultaneous running of multiple Worker machines. This program essentially listens to the job allocation information from the master (on one thread, with a specified port number), and simulates the execution of these tasks by decrementing the task duration and sleeping for 1 second (on a second thread). Meanwhile, it continues to listen to the Master (on the other thread), while each of the slots continues executing their tasks.
 
-Each of the workers’ log events into the log file. They log the following information:
+Each of the workers logs events into the log file. They log the following information:
  * Starting a map/reduce task and recording the timestamp
  * Ending a map/reduce task and recording the timestamp
 
 ## Results and Analysis
 
-The task and job execution times shed light on the type of scheduling algorithm used. The tests were run with 3 worker machines, with 3, 7 and 9 slots respectively, for 30 job requests.
+The task and job execution times shed light on the type of scheduling algorithm used. The tests were run with 3 worker machines, with 3, 7, and 9 slots respectively, for 30 job requests.
 
 The observations were as follows:
  * The Least Loaded scheduling algorithm has the least mean job completion time.
  * The job completion times for Random scheduling vary, highlighting the random nature of this type of scheduling.
- * The Round Robin scheduling algorithm generally takes the longest time to finish job execution.
+ * The Round-Robin scheduling algorithm generally takes the longest time to finish job execution.
