@@ -1,5 +1,5 @@
 ---
-title: "Vector Processing Tech Blog"
+title: "Vector Processing"
 collection: blogs
 ---
 
@@ -11,19 +11,19 @@ So, what is SIMD and Vector Processing, and what’s the fuss all about? Broadly
 
 Let’s consider an example where we have to perform the addition of two vectors (A and B) in the 3-dimensional coordinate system, each having the x, y, and z coordinates.
 
-A = [x<sub>A</sub>, yA, zA], B = [xB, yB, zB]
+A = [x<sub>A</sub>, y<sub>A</sub>, z<sub>A</sub>], B = [x<sub>B</sub>, y<sub>B</sub>, z<sub>B</sub>]
 
-Let C = [xC, yC, zC] represent the sum of the two vectors A and B.
+Let C = [x<sub>C</sub>, y<sub>C</sub>, z<sub>C</sub>] represent the sum of the two vectors A and B.
 
 The conventional way of doing this would be to use three separate Add instructions as follows:
 
-xC = xA + xB 
-yC = yA + yB 
-zC = zA + zB 
+x<sub>C</sub> = x<sub>A</sub> + x<sub>B</sub>
+y<sub>C</sub> = y<sub>A</sub> + y<sub>B</sub> 
+z<sub>C</sub> = z<sub>A</sub> + z<sub>B</sub> 
 
 Vector Processing uses SIMD at a register level by packing these scalars into a single vector register and uses just one Add instruction as follows:
 
-<img src='/images/Vector_Example_img.png'>
+<img src="/images/Vector_Example_img.png" width="500" height="600">
 
 Using a single Vector Add instruction natively supported by the hardware will substantially augment the performance due to the reduced CPI compared to three separate scalar Add instructions. The contemporary method of improving the performance would be to use multiple cores and realize data parallelism by distributing the data to be added across the multiple cores. In this case, three separate cores can be used to perform the addition of the x components, y components, and z components, respectively. However, the use of multiple cores can result in increased power consumption compared to vector processing, which is an elegant and efficient solution.
 
