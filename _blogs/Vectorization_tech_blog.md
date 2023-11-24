@@ -24,8 +24,9 @@ z<sub>C</sub> = z<sub>A</sub> + z<sub>B</sub><br>
 Vector Processing uses SIMD at a register level by packing these scalars into a single vector register and uses just one Add instruction as follows:
 
 <center><img src="/images/Vector_Example_img.png" width="500" height="600"></center>
+<br>
 
-Using a single Vector Add instruction natively supported by the hardware will substantially augment the performance due to the reduced CPI compared to three separate scalar Add instructions. The contemporary method of improving the performance would be to use multiple cores and realize data parallelism by distributing the data to be added across the multiple cores. In this case, three separate cores can be used to perform the addition of the x components, y components, and z components, respectively. However, the use of multiple cores can result in increased power consumption compared to vector processing, which is an elegant and efficient solution.
+The use of a single Vector Add instruction natively supported by the hardware will substantially augment the performance due to the reduced CPI as compared to three separate scalar Add instructions. The contemporary method of improving the performance would be to use multiple cores and realize data parallelism by distributing the data to be added across the multiple cores. In this case, three separate cores can be used to perform the addition of the x components, y components, and z components, respectively. However, the use of multiple cores can result in increased power consumption compared to vector processing, which is an elegant and efficient solution.
 
 The two major computing platforms, namely Intel and ARM, have iterated through different generations of SIMD and vector processing support, providing a wide (pun intended) variety of features as part of their ISA.
 
