@@ -48,19 +48,19 @@ Let C<sub>lxn</sub> = A<sub>lxm</sub> * B<sub>mxn</sub> represent the matrix mul
 The typical structure of the matrix multiplication nested loops is as follows:
 
 for i in 0..l:<br>
-    for j in 0..n:<br>
-        temp = C[i][j]<br>
-        for k in 0..m:<br>
-            temp += A[i][k] * B[k][j]<br>
-        C[i][j] = temp
+&nbsp&nbsp&nbsp&nbspfor j in 0..n:<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsptemp = C[i][j]<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfor k in 0..m:<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsptemp += A[i][k] * B[k][j]<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspC[i][j] = temp
 
 A drastic performance gain, especially for larger matrices that cannot be completely fit into the caches, can be achieved by switching the looping order for j and k as follows:
 
 for i in 0..l:<br>
-    for k in 0..m:<br>
-        temp = A[i][k]<br>
-        for j in 0..n:<br>
-            C[i][j] += temp * B[k][j]
+&nbsp&nbsp&nbsp&nbspfor k in 0..m:<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsptemp = A[i][k]<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfor j in 0..n:<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspC[i][j] += temp * B[k][j]
 
 This follows from the premise that matrices are stored in row-major format in C/C++ and most other programming languages. Therefore, the probability of finding the elements of the same row in the cache is higher than that of finding the elements of different rows due to the spatial locality of reference incorporated in caches through loads of cache lines.
 In the first case, the reads of A[i][k] are in cache (as the i index is constant and the k index is contiguous in the innermost loop), but the reads of B[k][j] aren’t (as the k index corresponding to the rows of B changes in every iteration). Therefore, there is a penalty incurred due to the cache misses.
