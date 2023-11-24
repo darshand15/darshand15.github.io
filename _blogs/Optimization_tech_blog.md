@@ -27,7 +27,7 @@ Prefetching, specifically cache prefetching, is a performance enhancement techni
 
 False sharing is a performance-degrading usage pattern that can be encountered in systems with distributed, coherent caches. False sharing occurs when threads on different processors modify variables that reside on the same cache line. When a thread modifies a variable in its cache, the whole cache line on which the variable resides is marked as invalid. If another thread attempts to access a completely different variable on the same cache line, then the modified cache line is written back to memory, and the thread fetches the cache line from memory. This occurs because cache coherency is maintained on a cache-line basis and not for individual variables or elements. With false sharing, a thread is forced to fetch a more recent copy of a cache line from memory, even though the variable it is attempting to access has not been modified. Therefore, it is important to keep note of and account for false sharing and its possibilities while designing the data structures in our program. It is possible to avoid false sharing by reordering the variables or adding padding (unused bytes) between the variables to ensure that they do not occupy the same cache line. It is also advised not to use temporary, thread-specific data organized in arrays that are indexed by the thread IDs. The use of thread-local variables can be a helpful alternative in this scenario.
 
-## Memory locking
+## Memory Locking
 
 In certain scenarios, as in the case of Real-time applications that require deterministic timing, paging is one major cause of unexpected program execution delays that can result in exceeding the desired timing boundaries. Memory locking through system calls like mlock() and mlockall() is a technique aimed at preventing delays due to page faults. It includes the locking of a part or all of the calling process’ virtual address space into RAM, thereby preventing that memory from being paged to the swap space. The memory that can be locked includes the pages of the code, data, and stack segments, as well as shared libraries, user space kernel data, shared memory, and memory-mapped files. All the pages are guaranteed to be resident in RAM until they are unlocked by the corresponding unlock system calls. Therefore, the judicious usage of memory locking for time-critical portions of an application can eliminate the delays due to page faults and can result in a performance gain.
 
@@ -43,23 +43,23 @@ Memory allocation system calls like malloc in C/C++ are considerably expensive. 
 
 Locality of reference is the tendency of a processor to access the same set of memory locations repetitively over a short period of time. There are two basic types of reference locality, namely – temporal and spatial locality. Temporal locality refers to the reuse of specific data and/or resources within a relatively short time duration. Spatial locality refers to the use of data elements within relatively close storage locations. The organization of the memory hierarchy is based on this concept of locality of reference. A typical memory hierarchy ranges from the CPU registers, the different levels of cache (L1, L2, and L3), RAM, and then finally, disk memory, which is the lowest level. As we move through the hierarchy from the lowest level of disk memory to the higher levels consisting of the different caches, the size of the memory keeps decreasing while the speed of the memory keeps increasing. Caches are one such example of exploiting the concept of locality of reference. They exploit temporal locality by storing the recently referenced data, expecting them to be reused in the immediate future. They exploit spatial locality by loading from the levels of memory in terms of cache lines, which are the basic units for cache storage. When a particular data element has to be loaded, the entire memory block of one cache line size containing that data element is loaded into the cache, expecting the usage of neighboring data. A comprehensive knowledge of the concept of locality of reference and its adoption in the memory hierarchy, specifically the cache, can lead to important insights that can result in performance gains. Let’s consider the example of matrix multiplication to highlight the effect of the locality of reference on performance.
 
-Let C<sub>l</sub>x<sub>n</sub> = A<sub>l</sub>x<sub>m</sub> * B<sub>m</sub>x<sub>n</sub> represent the matrix multiplication operation, where A and B are the matrices to be multiplied, and C is the product matrix with dimensions as depicted.
+Let C<sub>lxn</sub> = A<sub>lxm</sub> * B<sub>mxn</sub> represent the matrix multiplication operation, where A and B are the matrices to be multiplied, and C is the product matrix with dimensions as depicted.
 
 The typical structure of the matrix multiplication nested loops is as follows:
 
-for i in 0..l:
-    for j in 0..n:
-        temp = C[i][j]
-        for k in 0..m:
-            temp += A[i][k] * B[k][j]
+for i in 0..l:<br>
+    for j in 0..n:<br>
+        temp = C[i][j]<br>
+        for k in 0..m:<br>
+            temp += A[i][k] * B[k][j]<br>
         C[i][j] = temp
 
 A drastic performance gain, especially for larger matrices that cannot be completely fit into the caches, can be achieved by switching the looping order for j and k as follows:
 
-for i in 0..l:
-    for k in 0..m:
-        temp = A[i][k]
-        for j in 0..n:
+for i in 0..l:<br>
+    for k in 0..m:<br>
+        temp = A[i][k]<br>
+        for j in 0..n:<br>
             C[i][j] += temp * B[k][j]
 
 This follows from the premise that matrices are stored in row-major format in C/C++ and most other programming languages. Therefore, the probability of finding the elements of the same row in the cache is higher than that of finding the elements of different rows due to the spatial locality of reference incorporated in caches through loads of cache lines.
