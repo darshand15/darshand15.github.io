@@ -3,6 +3,16 @@ title: "Voice based Grievance System"
 collection: projects
 ---
 
+<style>
+  a 
+  {
+    color: blue;
+    text-decoration: none;
+  }
+</style>
+
+<a style="text-decoration: none;" href="/files/Voice_Grievance_Project_Presentation.pdf">[Presentation]</a>
+
 ## Problem Statement
 
  * The citizens and members of local communities encounter frequent domestic problems that can range from the petty to the most serious and time-critical. A few examples of the problems are as follows:

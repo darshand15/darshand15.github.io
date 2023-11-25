@@ -3,6 +3,17 @@ title: "Yet Another Centralized Scheduler (YACS)"
 collection: projects
 ---
 
+<style>
+  a 
+  {
+    color: blue;
+    text-decoration: none;
+  }
+</style>
+
+<a style="text-decoration: none;" href="/files/Big_Data_Project_Report.pdf">[Report]</a>
+<a style="text-decoration: none;" href="https://github.com/Spielerr/Big_Data_YACS">[Code]</a>
+
 ## Summary
 
 A project aimed at implementing a centralized scheduling framework that maintains and manages a master node and multiple worker nodes, all simulated as different processes on a single machine. The Master node receives job requests, which are scheduled on multiple slots across the available worker machines. The Master process consists of separate threads to listen to requests, to schedule map, and reduce tasks, and to listen to job completion information from workers. The Worker process listens to job allocation information and simulates execution. The job requests consist of map and reduce tasks with the dependency that the reduce tasks be executed only after the completion of the corresponding map tasks. The project involved the implementation of 3 different scheduling algorithms, namely Least loaded, Round robin, and Randomised Scheduling algorithms. This project was developed and implemented as part of the Big Data Course during my Undergraduate Study. 

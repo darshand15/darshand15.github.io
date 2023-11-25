@@ -9,7 +9,17 @@ collection: projects
     outline:none;
     border:none;
   }
+
+  a 
+  {
+    color: blue;
+    text-decoration: none;
+  }
 </style>
+
+<a style="text-decoration: none;" href="/files/Generic_Programming_Project_Report.pdf">[Report]</a>
+<a style="text-decoration: none;" href="/files/Generic_Programming_Project_Readme.pdf">[Readme]</a>
+<a style="text-decoration: none;" href="https://github.com/darshand15/GP_Project">[Code]</a>
 
 ## Summary
 
@@ -96,6 +106,3 @@ A few member algorithms have been implemented as follows:
  * **Member Replace**: If the generic replace algorithm is called on treap, once the key of a node is replaced with a new key, the binary search tree property and the max heap property of the treap may be broken. The member replace algorithm replaces the key with the new key value mentioned by doing the following. It first deletes the node containing the old key value. It then inserts a new node with the new key value. The insert function takes care of all the rotations to ensure that the binary search tree property and the max heap property of the treap are maintained.
 
 Further, different generic algorithms can be invoked for the treap by utilizing the iterators of the treap.
-
-
-Link to video demo, report, readme, ..

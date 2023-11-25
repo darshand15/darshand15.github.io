@@ -3,6 +3,16 @@ title: "Blockchain based Healthcare Transaction System"
 collection: projects
 ---
 
+<style>
+  a 
+  {
+    color: blue;
+    text-decoration: none;
+  }
+</style>
+
+<a style="text-decoration: none;" href="/files/Healthcare_Blockchain_Project_Presentation.pdf">[Presentation]</a>
+
 ## Problem Statement
 
  * An excessive amount of patient records are stored in paper format and the process to update/transfer when a patient switches to new doctors/hospitals is quite tedious and inefficient.

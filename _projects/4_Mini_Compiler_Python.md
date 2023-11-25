@@ -9,7 +9,16 @@ collection: projects
     outline:none;
     border:none;
   }
+
+  a 
+  {
+    color: blue;
+    text-decoration: none;
+  }
 </style>
+
+<a style="text-decoration: none;" href="/files/Compiler_Design_Project_Report.pdf">[Report]</a>
+<a style="text-decoration: none;" href="https://github.com/darshand15/Mini-Compiler-for-Python">[Code]</a>
 
 ## Summary
 
@@ -71,6 +80,3 @@ The following error detection and handling strategies have been implemented as p
  * If the length of an identifier exceeds 79 characters, an error message prompting this is shown to the user, and the identifier is truncated to the first 79 characters.
  * If an undeclared variable is used as part of an expression, a syntax error is thrown prompting the use of an undeclared variable.
  * If an invalid operator like the increment, decrement operator, etc is used as part of an expression, a syntax error is thrown.
-
-
-Link to video demo, report, readme, ..

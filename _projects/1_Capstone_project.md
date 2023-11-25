@@ -9,7 +9,17 @@ collection: projects
     outline:none;
     border:none;
   }
-</style> 
+
+  a 
+  {
+    color: blue;
+    text-decoration: none;
+  }
+</style>
+
+<a style="text-decoration: none;" href="/files/Capstone_Project_Report.pdf">[Report]</a>
+<a style="text-decoration: none;" href="/files/Capstone_Project_Presentation.pdf">[Presentation]</a>
+<a style="text-decoration: none;" href="https://github.com/Spielerr/Automated-Parallelization-of-Source-Code-using-Program-Comprehension">[Code]</a>
 
 ## Summary
 
@@ -69,6 +79,3 @@ The below flowchart gives an overview of the implemented project:
 ## Conclusion
 
 The project successfully achieved the research and development of techniques to automatically convert the sequential source code to its functionally accurate parallel equivalent with a substantial performance speedup (up to 500 times for larger data), thereby enabling the efficient and effective utilization of the underlying hardware resources.
-
-
-Links to Video Demo, Report, Code Repository, Paper draft, ...
