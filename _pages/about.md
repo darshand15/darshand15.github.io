@@ -8,6 +8,14 @@ redirect_from:
   - /about.html
 ---
 
+<style>
+  a 
+  {
+    color: blue;
+    text-decoration: none;
+  }
+</style>
+
 Hello! I am currently working as an Advanced Developer and Researcher for the Platform and Software Research team under 6G Lab at [Samsung Research](https://research.samsung.com/sri-b). In this role, I am actively researching advanced topics of interest like SIMD and Vector Processing, Compilers and Compiler Optimizations, LLVM and custom LLVM passes for optimization, with the overall objective of developing the platforms and software for the next generation of Wireless Communication to support stratospheric data rates of 100 Gbps. I completed my Undergraduate education at [PES University](https://www.pes.edu) in 2022, receiving a “First Class with Honors”, B. Tech Degree in “Computer Science and Engineering” and a Specialization in “Systems and Core Computing”.
 
 My technical interests broadly fall under the performance optimization umbrella and include such performance-motivated areas like Systems and Networking, High-Performance Computing, Compilers, Parallel-Computing, Distributed Systems, Operating Systems, and Computer Architecture. Throughout my academic and professional journey, I have consciously tailored my courses, projects, and research explorations in this direction of performance optimization. This journey has resulted in the ossification of my technical identity and the enhancement of my research acumen.
