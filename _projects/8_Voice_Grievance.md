@@ -20,7 +20,7 @@ collection: projects
     * The water supply might be irregular
     * The robberies in the neighbourhood might have increased
     * A short circuit might have occured resulting in a dangerous fire, etc
- * It is imperative that the concerned authorities are intimated immediately and the problem be rectified to ensure a smooth functioning of the society
+ * It is imperative that the concerned authorities are intimated immediately and the problem be rectified to ensure the smooth functioning of the society
  * But the citizens often find it confusing and troublesome to address these issues to the right department
  * They are often unaware of who, where and how a particular problem should be reported
  * There are often endless delegations wherein a department transfers the complainant to another and so on. This coupled with the inconveniences involved makes the entire process lengthy, cumbersome and ineffective and can result in dangerous consequences due to the delay in addressing the problems.
@@ -31,7 +31,7 @@ The project addressed and solved the above problems by implementing a solution i
  * A mobile application that can accept the grievances and complaints of the citizens in voice and text format.
  * The voice based complaints are converted to text.
  * The recorded complaints and grievances are classified and redirected to the appropriate departments.
- * Further, the complaints reaching a department are ranked on the base of severity. This is decided based on the type of complaint and the time-critical nature of the matter under consideration.
+ * Further, the complaints reaching a department are ranked on the basis of severity. This is decided based on the type of complaint and the time-critical nature of the matter under consideration.
  * In this way, the citizens will have a single interface to address all their concerns. On the other hand, the departments will only receive the complaints that concern them in a prioritized order.
  * This makes the entire process seamless and very convenient for all the parties involved. It should help both the citizens to address their problems effortlessly and should aid the departments to solve the problems aptly with a much shorter turnaround time.
  * Further, a mobile application with regular updates and statistics about the problems and solutions encourages a constructive dialogue between the citizens and civic authorities and enables a united approach to improve the city.
@@ -42,4 +42,4 @@ The project addressed and solved the above problems by implementing a solution i
  * In the case of voice complaints, the project involved the implementation and use of a voice to text conversion algorithm.
  * The complaints in text format are then tokenized and mapped to the respective departments using the concepts of Natural Language Processing (NLP).
  * Further, the complaints reaching a particular department are ranked based on severity and the time-critical nature which is again deduced from the complaint using the concepts of NLP.
- * The project also involved the implementation of a front-end website for the departments to ensure that these complaints are ranked and displayed to the respective departments. The App on the user side and the website on the department side were completely integrated into an end-to-end pipeline to ensure that the complaints voiced on the app undergo the processing using NLP to finally rank and display the complaints to the respective department on their website.
+ * The project also involved the implementation of a front-end website for the departments to ensure that these complaints are ranked and displayed to the respective departments. The App on the user side and the Website on the department side were completely integrated into an end-to-end pipeline to ensure that the complaints voiced on the app undergo the processing using NLP to finally rank and display the complaints to the respective department on their website.

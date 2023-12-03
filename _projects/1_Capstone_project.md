@@ -23,7 +23,7 @@ collection: projects
 
 ## Summary
 
-A Research exploration aimed at exploring methods to improve the performance of sequential source code by automatically converting it to its functionally accurate parallel equivalent by implementing Intra-Function and Inter-Function Parallelism, thereby ensuring effective and efficient utilization of the underlying hardware resources. This project was developed and implemented as part of the Capstone Project during my Undergraduate Study.
+A Research project aimed at exploring methods to improve the performance of sequential source code by automatically converting it to its functionally accurate parallel equivalent by implementing Intra-Function and Inter-Function Parallelism, thereby ensuring effective and efficient utilization of the underlying hardware resources. This project was developed and implemented as part of the Capstone Project during my Undergraduate Study.
 
 ## Video Demo
   
@@ -34,7 +34,7 @@ Your browser does not support the video tag.
 
 ## Abstract
 
- * There has been a rapid improvement in hardware and compute platforms and their capabilities
+ * There has been a rapid improvement in hardware and computing platforms and their capabilities
  * But the performance gain achieved is limited by the software and programs written to run on these platforms
  * Sequential software does not exploit these hardware capabilities to the maximum possible extent
  * This is with respect to the utilization of multiple threads, processors, cores, and other available resources
@@ -78,4 +78,4 @@ The below flowchart gives an overview of the implemented project:
 
 ## Conclusion
 
-The project successfully achieved the research and development of techniques to automatically convert the sequential source code to its functionally accurate parallel equivalent with a substantial performance speedup (up to 500 times for larger data), thereby enabling the efficient and effective utilization of the underlying hardware resources.
+The project successfully achieved the research and development of techniques to automatically convert sequential source code into its functionally accurate parallel equivalent with a substantial performance speedup (up to 500 times for large data), thereby enabling the efficient and effective utilization of the underlying hardware resources.

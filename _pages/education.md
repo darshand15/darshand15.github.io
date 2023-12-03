@@ -7,8 +7,8 @@ author_profile: true
 
 {% include base_path %}
 
-## PES University - Bangalore (Aug 2018 - Aug 2022)
- * B. Tech with Honours in Computer Science and Engineering
+## PES University - Bangalore (July 2018 - May 2022)
+ * B. Tech in Computer Science and Engineering (First Class with Honors)
  * CGPA: 9.54/10 (Top 5%)
  * Acquired Specialization in Systems and Core Computing
  * Received the CNR Rao Merit Scholarship in every Semester for being in the top 5% in academics
@@ -43,9 +43,9 @@ author_profile: true
 
 
 ## RV PU College - Bangalore (May 2016 - April 2018)
- * 2nd PU State Boards: 95.33%
+ * 2<sup>nd</sup> PU State Boards: 95.33%
  * KCET State Rank: 276
 
 ## Carmel School - Bangalore (June 2006 - April 2016)
- * ICSE Boards: 96.83%
+ * 10<sup>th</sup> Grade ICSE Boards: 96.83%
 

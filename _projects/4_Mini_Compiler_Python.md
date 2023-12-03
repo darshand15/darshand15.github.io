@@ -69,8 +69,8 @@ The following intermediate code optimizations have been implemented as part of t
     * Here, an expensive operation is replaced by a cheaper operation.
     * The cost being talked about here is with respect to the evaluation of the expression by the underlying hardware
     * Example:
-        * a*2 => a<<1
-        * a/2 => a>>1
+        * a*2 => a&lt;&lt;1
+        * a/2 => a&gt;&gt;1
 
 ### Error Handling
 
