@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Darshan D"
+title                    : "Darshan Dinesh Kumar"
 title_separator          : "-"
-name                     : &name "Darshan D"
+name                     : &name "Darshan Dinesh Kumar"
 description              : &description "personal description"
 url                      : https://darshand15.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -82,8 +82,8 @@ analytics:
 author:
   name             : "Darshan Dinesh Kumar"
   avatar           : "Darshan_D_Profile_Photo_Modified_2.png"
-  bio              : "Advanced Developer and Researcher for 6G Lab, Samsung Research"
-  location         : "Bangalore, India"
+  bio              : "Master of Science in Computer Science Student at New York University Courant"
+  location         : "New York, USA"
   employer         :
   pubmed           : 
   googlescholar    : 
