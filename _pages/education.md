@@ -7,6 +7,9 @@ author_profile: true
 
 {% include base_path %}
 
+## New York University (Courant Institute of Mathematical Sciences) - New York (Aug 2024 - Present)
+ * Master of Science in Computer Science
+
 ## PES University - Bangalore (July 2018 - May 2022)
  * B. Tech in Computer Science and Engineering (First Class with Honors)
  * CGPA: 9.54/10 (Top 5%)
