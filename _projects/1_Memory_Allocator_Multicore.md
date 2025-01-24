@@ -39,23 +39,27 @@ The end of Moore’s Law necessitates the development of innovative solutions to
 ## Results
 
  * In order to compare the different memory allocators, namely Malloc, Hoard and My_mem_alloc (corresponds to the Concurrent and Scalable Memory Allocator developed as part of this project), various benchmark programs were developed as below:
-    * Speed: In order to compare the different memory allocators for speed, single threaded and multithreaded benchmark programs were developed under different categories, namely, No Malloc or Free, CPU bound and Memory bound. Execution Time was used as the metric for comparison. The generated results are summarized in the graph below:
-
-    <img src='/images/single_threaded_speed.png'>
-
-    <img src='/images/multi_threaded_speed.png'>
-
+    * **Speed:** In order to compare the different memory allocators for speed, single threaded and multithreaded benchmark programs were developed under different categories, namely, No Malloc or Free, CPU bound and Memory bound. Execution Time was used as the metric for comparison. The generated results are summarized in the graph below:
+    <br>
+    <img src='/images/single_threaded_speed.png' style="padding:1px;border:thin solid black;">
+    <br>
+    <img src='/images/multi_threaded_speed.png' style="padding:1px;border:thin solid black;">
+    <br>
+    <br>
     * Scalability: A benchmark was developed to compare the memory allocators for scalability. Speedup was used as the metric for comparison. The generated results are summarized in the graph below:
-
-    <img src='/images/scalability_comparison.png'>
-
-    * False Sharing Avoidance: With regards to False Sharing, two categories of benchmarks were developed, namely, Active False Sharing and Passive False Sharing. Execution Time was used as the metric for comparison. The generated results are summarized in the graph below:
-
-    <img src='/images/false_sharing_comparison.png'>
-
-    * Fragmentation: A benchmark was developed to compare the memory allocators for Fragmentation. Fragmentation Ratio (Max amount of memory allocated from OS / Max amount of memory required by application) was used as the metric for comparison. The generated results are summarized in the graph below:
-
-    <img src='/images/fragmentation_comparison.png'>
-
+    <br>
+    <img src='/images/scalability_comparison.png' style="padding:1px;border:thin solid black;">
+    <br>
+    <br>
+    * **False Sharing Avoidance:** With regards to False Sharing, two categories of benchmarks were developed, namely, Active False Sharing and Passive False Sharing. Execution Time was used as the metric for comparison. The generated results are summarized in the graph below:
+    <br>
+    <img src='/images/false_sharing_comparison.png' style="padding:1px;border:thin solid black;">
+    <br>
+    <br>
+    * **Fragmentation:** A benchmark was developed to compare the memory allocators for Fragmentation. Fragmentation Ratio (Max amount of memory allocated from OS / Max amount of memory required by application) was used as the metric for comparison. The generated results are summarized in the graph below:
+    <br>
+    <img src='/images/fragmentation_comparison.png' style="padding:1px;border:thin solid black;">
+    <br>
+    <br>
 
 
