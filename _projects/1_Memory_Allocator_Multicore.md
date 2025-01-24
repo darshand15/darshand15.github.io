@@ -42,7 +42,7 @@ The end of Moore’s Law necessitates the development of innovative solutions to
     * **Speed:** In order to compare the different memory allocators for speed, single threaded and multithreaded benchmark programs were developed under different categories, namely, No Malloc or Free, CPU bound and Memory bound. Execution Time was used as the metric for comparison. The generated results are summarized in the graph below:
     <br><br>
     <img src='/images/single_threaded_speed.png' style="padding:1px;border:thin solid black;">
-    <br><br>
+    <br><br><br>
     <img src='/images/multi_threaded_speed.png' style="padding:1px;border:thin solid black;">
     <br><br>
     <br>
