@@ -35,71 +35,72 @@ improving database performance by utilizing the power of multiple cores and proc
 
 ## Implementation Details
 
- * The results of the project along with the related implementation details are summarized as follows:
-    * A parallel relational database supporting a subset of the typical CRUD (Create, Read, Update, Delete) operations has been designed and implemented.
+The results of the project along with the related implementation details are summarized as follows:
 
-    * Various CRUD queries fundamental to the functionality of a Database have been implemented as below: 
-        * Creating a Table
-        * Setting a Primary Key
-        * Inserting rows into the table
-        * Enforcing the Primary Key Constraint
-        * Updating the rows of the table including conditional updation
-        * Deleting the rows of the table including conditional deletion
-        * Different variants of the Select Query including Selecting all the columns of all the rows, Selecting all the columns of rows meeting a condition, Selecting a subset of the columns of all rows,  Selecting a subset of the columns of rows meeting a condition.
+* A parallel relational database supporting a subset of the typical CRUD (Create, Read, Update, Delete) operations has been designed and implemented.
 
-    * Various aspects related to Parallelism have been identified and implemented as follows:
+* Various CRUD queries fundamental to the functionality of a Database have been implemented as below: 
+    * Creating a Table
+    * Setting a Primary Key
+    * Inserting rows into the table
+    * Enforcing the Primary Key Constraint
+    * Updating the rows of the table including conditional updation
+    * Deleting the rows of the table including conditional deletion
+    * Different variants of the Select Query including Selecting all the columns of all the rows, Selecting all the columns of rows meeting a condition, Selecting a subset of the columns of all rows,  Selecting a subset of the columns of rows meeting a condition.
 
-        * **Select Search Query based on equality of primary key field:** Here, a B-Tree has been implemented for indexing the table based on the primary key field. It was observed that the Select Search Query using the B-Tree implementation performed approximately 20x faster than the corresponding sequential implementation.
+* Various aspects related to Parallelism have been identified and implemented as follows:
 
-        * **Select Range Query based on primary key field:** Here, a B-Tree has been implemented for indexing the table based on the primary key field. It was observed that the Select Range Query using the B-Tree implementation performed approximately 2x faster than the corresponding sequential implementation.
+    * **Select Search Query based on equality of primary key field:** Here, a B-Tree has been implemented for indexing the table based on the primary key field. It was observed that the Select Search Query using the B-Tree implementation performed approximately 20x faster than the corresponding sequential implementation.
 
-        * **Select all Columns for rows meeting a condition:** A parallel for loop was used to implement this query. It was observed that the speedup was suboptimal (below 1) in this case with the speedup further decreasing with the increase in the number of threads. The main reason is that as this query requires displaying of the rows, the implementation uses a lock-based data structure to serialize the prints. As these overheads due to lock-contention are significant, there are no benefits due to parallelism for this query and it in fact worsens the performance as compared to the sequential version.
+    * **Select Range Query based on primary key field:** Here, a B-Tree has been implemented for indexing the table based on the primary key field. It was observed that the Select Range Query using the B-Tree implementation performed approximately 2x faster than the corresponding sequential implementation.
 
-        * **Select a subset of the Columns for rows meeting a condition:** A parallel for loop was used to implement this query. It was observed that the speedup was suboptimal (below 1) in this case with the speedup further decreasing with the increase in the number of threads. The main reason is that as this query requires displaying of the rows, the implementation uses a lock-based data structure to serialize the prints. As these overheads due to lock-contention are significant, there are no benefits due to parallelism for this query and it in fact worsens the performance as compared to the sequential version.
+    * **Select all Columns for rows meeting a condition:** A parallel for loop was used to implement this query. It was observed that the speedup was suboptimal (below 1) in this case with the speedup further decreasing with the increase in the number of threads. The main reason is that as this query requires displaying of the rows, the implementation uses a lock-based data structure to serialize the prints. As these overheads due to lock-contention are significant, there are no benefits due to parallelism for this query and it in fact worsens the performance as compared to the sequential version.
 
-        * **Order by Ascending Query:** A Parallel merge sort was used to implement this query. It was observed that the Parallel version achieved a maximum speedup of 2.2 for 16 threads, thereby denoting that there were some benefits due to parallelism.
+    * **Select a subset of the Columns for rows meeting a condition:** A parallel for loop was used to implement this query. It was observed that the speedup was suboptimal (below 1) in this case with the speedup further decreasing with the increase in the number of threads. The main reason is that as this query requires displaying of the rows, the implementation uses a lock-based data structure to serialize the prints. As these overheads due to lock-contention are significant, there are no benefits due to parallelism for this query and it in fact worsens the performance as compared to the sequential version.
 
-        * **Order by Descending Query:** A Parallel merge sort was used to implement this query. It was observed that the Parallel version achieved a maximum speedup of 1.36 for 8 threads, thereby denoting that there were some benefits due to parallelism.
+    * **Order by Ascending Query:** A Parallel merge sort was used to implement this query. It was observed that the Parallel version achieved a maximum speedup of 2.2 for 16 threads, thereby denoting that there were some benefits due to parallelism.
 
-        * **Group by Count Query:** Here, two different parallel versions were implemented:
+    * **Order by Descending Query:** A Parallel merge sort was used to implement this query. It was observed that the Parallel version achieved a maximum speedup of 1.36 for 8 threads, thereby denoting that there were some benefits due to parallelism.
 
-            * Parallel Version 1: This initially performs a parallel merge sort followed by sequential traversal of the sorted rows to aggregate the count of the groups. This version achieves a maximum speedup of 6 using 32 threads as compared to the sequential version.
+    * **Group by Count Query:** Here, two different parallel versions were implemented:
 
-            * Parallel Version 2: This initially performs a parallel merge sort followed by a parallel algorithm to aggregate the count of the groups using parallel primitives like tabulate and filter. This version achieves a maximum speedup of 5.5 using 32 threads as compared to the sequential version.
-            
-            The Parallel Version 1 performs slightly better than the Parallel Version 2. This could be because the overheads introduced by version 2’s algorithm which requires the creation of additional data structures using tabulate and filter is quite considerable that it is outweighing any benefits due to parallelism.
+        * Parallel Version 1: This initially performs a parallel merge sort followed by sequential traversal of the sorted rows to aggregate the count of the groups. This version achieves a maximum speedup of 6 using 32 threads as compared to the sequential version.
 
-        * **Group by Min Query:** Here, two different parallel versions were implemented:
+        * Parallel Version 2: This initially performs a parallel merge sort followed by a parallel algorithm to aggregate the count of the groups using parallel primitives like tabulate and filter. This version achieves a maximum speedup of 5.5 using 32 threads as compared to the sequential version.
+        
+        The Parallel Version 1 performs slightly better than the Parallel Version 2. This could be because the overheads introduced by version 2’s algorithm which requires the creation of additional data structures using tabulate and filter is quite considerable that it is outweighing any benefits due to parallelism.
 
-            * Parallel Version 1: This initially performs a parallel merge sort followed by sequential traversal of the sorted rows to aggregate the min of the groups. This version achieves a maximum speedup of 5.3 using 32 threads as compared to the sequential version.
+    * **Group by Min Query:** Here, two different parallel versions were implemented:
 
-            * Parallel Version 2: This initially performs a parallel merge sort followed by a parallel algorithm to aggregate the min of the groups using parallel primitives like tabulate, filter and reduce. This version achieves a maximum speedup of 6.5 using 32 threads as compared to the sequential version.
-            
-            The Parallel Version 2 performs better than the Parallel Version 1. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
+        * Parallel Version 1: This initially performs a parallel merge sort followed by sequential traversal of the sorted rows to aggregate the min of the groups. This version achieves a maximum speedup of 5.3 using 32 threads as compared to the sequential version.
 
-        * **Group by Max Query:** Here, two different parallel versions were implemented:
+        * Parallel Version 2: This initially performs a parallel merge sort followed by a parallel algorithm to aggregate the min of the groups using parallel primitives like tabulate, filter and reduce. This version achieves a maximum speedup of 6.5 using 32 threads as compared to the sequential version.
+        
+        The Parallel Version 2 performs better than the Parallel Version 1. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
-            * Parallel Version 1: This initially performs a parallel merge sort followed by sequential traversal of the sorted rows to aggregate the max of the groups. This version achieves a maximum speedup of 5.7 using 32 threads as compared to the sequential version.
+    * **Group by Max Query:** Here, two different parallel versions were implemented:
 
-            * Parallel Version 2: This initially performs a parallel merge sort followed by a parallel algorithm to aggregate the max of the groups using parallel primitives like tabulate, filter and reduce. This version achieves a maximum speedup of 8.1 using 32 threads as compared to the sequential version.
-            
-            The Parallel Version 2 performs better than the Parallel Version 1. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
+        * Parallel Version 1: This initially performs a parallel merge sort followed by sequential traversal of the sorted rows to aggregate the max of the groups. This version achieves a maximum speedup of 5.7 using 32 threads as compared to the sequential version.
 
-        * **Group by Sum Query:** Here, two different parallel versions were implemented:
+        * Parallel Version 2: This initially performs a parallel merge sort followed by a parallel algorithm to aggregate the max of the groups using parallel primitives like tabulate, filter and reduce. This version achieves a maximum speedup of 8.1 using 32 threads as compared to the sequential version.
+        
+        The Parallel Version 2 performs better than the Parallel Version 1. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
-            * Parallel Version 1: This initially performs a parallel merge sort followed by sequential traversal of the sorted rows to aggregate the sum of the groups. This version achieves a maximum speedup of 6 using 32 threads as compared to the sequential version.
+    * **Group by Sum Query:** Here, two different parallel versions were implemented:
 
-            * Parallel Version 2: This initially performs a parallel merge sort followed by a parallel algorithm to aggregate the sum of the groups using parallel primitives like tabulate, filter and reduce. This version achieves a maximum speedup of 8.1 using 32 threads as compared to the sequential version.
-            
-            The Parallel Version 2 performs better than the Parallel Version 1. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
+        * Parallel Version 1: This initially performs a parallel merge sort followed by sequential traversal of the sorted rows to aggregate the sum of the groups. This version achieves a maximum speedup of 6 using 32 threads as compared to the sequential version.
 
-        * **Group by Average Query:** Here, two different parallel versions were implemented:
+        * Parallel Version 2: This initially performs a parallel merge sort followed by a parallel algorithm to aggregate the sum of the groups using parallel primitives like tabulate, filter and reduce. This version achieves a maximum speedup of 8.1 using 32 threads as compared to the sequential version.
+        
+        The Parallel Version 2 performs better than the Parallel Version 1. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
-            * Parallel Version 1: This initially performs a parallel merge sort followed by sequential traversal of the sorted rows to aggregate the average of the groups. This version achieves a maximum speedup of 5.5 using 32 threads as compared to the sequential version.
+    * **Group by Average Query:** Here, two different parallel versions were implemented:
 
-            * Parallel Version 2: This initially performs a parallel merge sort followed by a parallel algorithm to aggregate the average of the groups using parallel primitives like tabulate, filter and reduce. This version achieves a maximum speedup of 8.3 using 32 threads as compared to the sequential version.
-            
-            The Parallel Version 2 performs better than the Parallel Version 1. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
+        * Parallel Version 1: This initially performs a parallel merge sort followed by sequential traversal of the sorted rows to aggregate the average of the groups. This version achieves a maximum speedup of 5.5 using 32 threads as compared to the sequential version.
+
+        * Parallel Version 2: This initially performs a parallel merge sort followed by a parallel algorithm to aggregate the average of the groups using parallel primitives like tabulate, filter and reduce. This version achieves a maximum speedup of 8.3 using 32 threads as compared to the sequential version.
+        
+        The Parallel Version 2 performs better than the Parallel Version 1. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
 
 ## Results
@@ -110,7 +111,6 @@ improving database performance by utilizing the power of multiple cores and proc
 <br><br>
 <img src='/images/select_pk_eq.png' style="padding:1px;border:thin solid black;">
 <br><br>
-<br>
 
 It can be observed that the B-Tree implementation performs approximately 20x faster than the corresponding sequential implementation.
 
@@ -118,7 +118,6 @@ It can be observed that the B-Tree implementation performs approximately 20x fas
 <br><br>
 <img src='/images/select_pk_range.png' style="padding:1px;border:thin solid black;">
 <br><br>
-<br>
 
 It can be observed that the Select Range Query using the B-Tree implementation performs approximately 2x faster than the corresponding sequential implementation.
 
@@ -134,7 +133,6 @@ Here, the speedup is suboptimal (below 1) and the speedup decreases with the inc
 <br><br>
 <img src='/images/select_cols_cond.png' style="padding:1px;border:thin solid black;">
 <br><br>
-<br>
 
 Here, the speedup is suboptimal (below 1) and the speedup decreases with the increase in the number of threads. The main reason is that as this query requires displaying of the rows, the implementation uses a lock-based data structure to serialize the prints. As these overheads due to lock-contention are significant, there are no benefits due to parallelism for this query.
 
@@ -142,7 +140,6 @@ Here, the speedup is suboptimal (below 1) and the speedup decreases with the inc
 <br><br>
 <img src='/images/order_by_asc.png' style="padding:1px;border:thin solid black;">
 <br><br>
-<br>
 
 It can be observed that the Parallel version achieved a maximum speedup of 2.2 for 16 threads, thereby denoting that there were some benefits due to parallelism.
 
@@ -150,7 +147,6 @@ It can be observed that the Parallel version achieved a maximum speedup of 2.2 f
 <br><br>
 <img src='/images/order_by_desc.png' style="padding:1px;border:thin solid black;">
 <br><br>
-<br>
 
 It can be observed that the Parallel version achieved a maximum speedup of 1.36 for 8 threads, thereby denoting that there were some benefits due to parallelism.
 
@@ -158,7 +154,6 @@ It can be observed that the Parallel version achieved a maximum speedup of 1.36 
 <br><br>
 <img src='/images/group_by_count.png' style="padding:1px;border:thin solid black;">
 <br><br>
-<br>
 
 It can be observed that the Parallel Version 1 performs slightly better than the Parallel Version 2. This could be because the overheads introduced by version 2’s algorithm which requires the creation of additional data structures using tabulate and filter is quite considerable that it is outweighing any benefits.
 
@@ -166,7 +161,6 @@ It can be observed that the Parallel Version 1 performs slightly better than the
 <br><br>
 <img src='/images/group_by_min.png' style="padding:1px;border:thin solid black;">
 <br><br>
-<br>
 
 It can observed that the Parallel Version 2 performs better than the Parallel Version 1 with the increase in number of threads. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
@@ -174,7 +168,6 @@ It can observed that the Parallel Version 2 performs better than the Parallel Ve
 <br><br>
 <img src='/images/group_by_max.png' style="padding:1px;border:thin solid black;">
 <br><br>
-<br>
 
 It can be observed that the Parallel Version 2 performs better than the Parallel Version 1 with the increase in number of threads. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
@@ -182,7 +175,6 @@ It can be observed that the Parallel Version 2 performs better than the Parallel
 <br><br>
 <img src='/images/group_by_sum.png' style="padding:1px;border:thin solid black;">
 <br><br>
-<br>
 
 It can be observed that the Parallel Version 2 performs better than the Parallel Version 1 with the increase in number of threads. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
@@ -190,7 +182,6 @@ It can be observed that the Parallel Version 2 performs better than the Parallel
 <br><br>
 <img src='/images/group_by_avg.png' style="padding:1px;border:thin solid black;">
 <br><br>
-<br>
 
 It can be observed that the Parallel Version 2 performs better than the Parallel Version 1 with the increase in number of threads. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
