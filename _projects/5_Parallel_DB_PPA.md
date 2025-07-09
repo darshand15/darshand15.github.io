@@ -110,7 +110,7 @@ The results of the project along with the related implementation details are sum
 * **Select Search Query based on equality of primary key field:** The below graph summarizes the performance comparison between SELECT_PK_EQ_SEQ and SELECT_PK_EQ for a query to retrieve the rows of the Person relation (of 10000 rows) with id == 7312:
 <br><br>
 <img src='/images/select_pk_eq.png' style="padding:1px;border:thin solid black;">
-<br><br>
+<br>
 
     It can be observed that the B-Tree implementation performs approximately 20x faster than the corresponding sequential implementation.
 
