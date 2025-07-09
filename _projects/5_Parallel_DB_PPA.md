@@ -117,70 +117,70 @@ The results of the project along with the related implementation details are sum
 * **Select Range Query based on primary key field:** The below graph summarizes the performance comparison between SELECT_ALL_RANGE and SELECT_PK_RANGE for a query to retrieve the rows of the Person relation (of 10000 rows) with id >= 1291 and id <= 1524:
 <br><br>
 <img src='/images/select_pk_range.png' style="padding:1px;border:thin solid black;">
-<br><br>
+<br>
 
     It can be observed that the Select Range Query using the B-Tree implementation performs approximately 2x faster than the corresponding sequential implementation.
 
 * **Select all Columns for rows meeting a condition:** The below graph summarizes the performance comparison between SELECT_ALL_COND and SELECT_ALL_COND_PAR for a query to retrieve the rows of the Person relation (of 10000 rows) with salary >= 250:
 <br><br>
 <img src='/images/select_all_cond.png' style="padding:1px;border:thin solid black;">
-<br><br>
+<br>
 
     Here, the speedup is suboptimal (below 1) and the speedup decreases with the increase in the number of threads. The main reason is that as this query requires displaying of the rows, the implementation uses a lock-based data structure to serialize the prints. As these overheads due to lock-contention are significant, there are no benefits due to parallelism for this query.
 
 * **Select a subset of the Columns for rows meeting a condition:** The below graph summarizes the performance comparison between SELECT_COLS_COND and SELECT_COLS_COND_PAR for a query to retrieve the id, fname, age fields of the rows of the Person relation (of 10000 rows) with age >= 45:
 <br><br>
 <img src='/images/select_cols_cond.png' style="padding:1px;border:thin solid black;">
-<br><br>
+<br>
 
     Here, the speedup is suboptimal (below 1) and the speedup decreases with the increase in the number of threads. The main reason is that as this query requires displaying of the rows, the implementation uses a lock-based data structure to serialize the prints. As these overheads due to lock-contention are significant, there are no benefits due to parallelism for this query.
 
 * **Order by Ascending Query:** The below graph summarizes the performance comparison between ORDER_BY_ASC and ORDER_BY_ASC_PAR for a query to order the rows of the Person relation (of 10000 rows) based on (fname, lname, id) fields:
 <br><br>
 <img src='/images/order_by_asc.png' style="padding:1px;border:thin solid black;">
-<br><br>
+<br>
 
     It can be observed that the Parallel version achieved a maximum speedup of 2.2 for 16 threads, thereby denoting that there were some benefits due to parallelism.
 
 * **Order by Descending Query:** The below graph summarizes the performance comparison between ORDER_BY_ DESC and ORDER_BY_ DESC _PAR for a query to order the rows of the Person relation (of 10000 rows) based on (salary, id) fields:
 <br><br>
 <img src='/images/order_by_desc.png' style="padding:1px;border:thin solid black;">
-<br><br>
+<br>
 
     It can be observed that the Parallel version achieved a maximum speedup of 1.36 for 8 threads, thereby denoting that there were some benefits due to parallelism.
 
 * **Group by Count Query:** The below graph summarizes the performance comparison between GROUP_BY_COUNT, GROUP_BY_COUNT_PAR, and GROUP_BY_COUNT_PAR2 for a query to group the rows of the Person relation (of 10000 rows) based on (lname) and retrieve their counts:
 <br><br>
 <img src='/images/group_by_count.png' style="padding:1px;border:thin solid black;">
-<br><br>
+<br>
 
     It can be observed that the Parallel Version 1 performs slightly better than the Parallel Version 2. This could be because the overheads introduced by version 2’s algorithm which requires the creation of additional data structures using tabulate and filter is quite considerable that it is outweighing any benefits.
 
 * **Group by Min Query:** The below graph summarizes the performance comparison between GROUP_BY_MIN, GROUP_BY_MIN_PAR2, and GROUP_BY_MIN_PAR2 for a query to group the rows of the Person relation (of 10000 rows) based on (country) and retrieve the minimum salary for these groups:
 <br><br>
 <img src='/images/group_by_min.png' style="padding:1px;border:thin solid black;">
-<br><br>
+<br>
 
     It can observed that the Parallel Version 2 performs better than the Parallel Version 1 with the increase in number of threads. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
 * **Group by Max Query:** The below graph summarizes the performance comparison between GROUP_BY_MAX, GROUP_BY_MAX_PAR, and GROUP_BY_MAX_PAR2 for a query to group the rows of the Person relation (of 10000 rows) based on (country) and retrieve the maximum age for these groups:
 <br><br>
 <img src='/images/group_by_max.png' style="padding:1px;border:thin solid black;">
-<br><br>
+<br>
 
     It can be observed that the Parallel Version 2 performs better than the Parallel Version 1 with the increase in number of threads. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
 * **Group by Sum Query:** The below graph summarizes the performance comparison between GROUP_BY_SUM , GROUP_BY_SUM_PAR, and GROUP_BY_SUM_PAR2 for a query to group the rows of the Person relation (of 10000 rows) based on (country) and retrieve the sum of the salary for these groups:
 <br><br>
 <img src='/images/group_by_sum.png' style="padding:1px;border:thin solid black;">
-<br><br>
+<br>
 
     It can be observed that the Parallel Version 2 performs better than the Parallel Version 1 with the increase in number of threads. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
 * **Group by Average Query:** The below graph summarizes the performance comparison between GROUP_BY_AVG, GROUP_BY_AVG_PAR, and GROUP_BY_AVG_PAR2 for a query to group the rows of the Person relation (of 10000 rows) based on (country) and retrieve the average of the salary for these groups:
 <br><br>
 <img src='/images/group_by_avg.png' style="padding:1px;border:thin solid black;">
-<br><br>
+<br>
 
     It can be observed that the Parallel Version 2 performs better than the Parallel Version 1 with the increase in number of threads. This could be because the parallel version 2 algorithm using primitives like tabulate, filter and reduce inherently contains more scope for parallelism as compared to parallel version 1 which is essentially sequential after the initial parallel sort.
 
