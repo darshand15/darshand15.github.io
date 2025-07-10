@@ -16,7 +16,7 @@ redirect_from:
   }
 </style>
 
-Hello! I am a second-year student in the **Master of Science program in Computer Science Courant** at <a style="text-decoration: none;" href="https://cs.nyu.edu/home/">New York University (Courant Institute of Mathematical Sciences)</a>. I have been researching topics under *Elastic Scheduling, Work Stealing, Parallel Computing, and Programming Languages*, under the guidance of <a style="text-decoration: none;" href="https://cs.nyu.edu/~shw8119/">Prof. Sam Westrick</a>.
+Hello! I am a second-year student in the **Master of Science program in Computer Science Courant** at <a style="text-decoration: none;" href="https://cs.nyu.edu/home/">New York University (Courant Institute of Mathematical Sciences)</a>. At NYU, I have been researching topics under *Elastic Scheduling, Work Stealing, Parallel Computing, and Programming Languages*, under the guidance of <a style="text-decoration: none;" href="https://cs.nyu.edu/~shw8119/">Prof. Sam Westrick</a>.
 
 I previously worked as a *Researcher and Developer* for the *Platform and Software Research* team under 6G Lab at <a style="text-decoration: none;" href="https://research.samsung.com/sri-b">Samsung Research</a>. In this role, I actively researched various advanced topics of interest like SIMD and Vector Processing, Compilers and Compiler Optimizations, LLVM and custom LLVM passes for optimization, with the overall objective of developing the platforms and software for the next generation of Wireless Communication to support stratospheric data rates of 100 Gbps. 
 
