@@ -27,8 +27,8 @@ main:
   #- title: "Portfolio"
   #  url: /portfolio/
     
-  - title: "CV"
-    url: /files/CV_Darshan_Dinesh_Kumar.pdf
+  - title: "Resume"
+    url: /files/Resume_Darshan_Dinesh_Kumar.pdf
     
   #- title: "Guide"
   #  url: /markdown/
