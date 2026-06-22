@@ -18,10 +18,10 @@ author_profile: true
 ## Publications
 
 ### **Scheduler Augmentation: A Lightweight, Customizable, Low-Cost Profiling Technique for Fork-Join Parallel Programs**
-* **Authors:** Sam Westrick<sup>\*</sup>, **Darshan Dinesh Kumar**<sup>\*</sup>, and Seong-Heon Jung<sup>\*</sup>
-* **Venue:** ACM Symposium on Parallelism in Algorithms and Architectures (**SPAA 2026**), July 2026, London, UK
-* **Links:** <a href="https://spaa.acm.org/papers-accepted-to-spaa-2026/">[Paper Link]</a> <a href="https://github.com/nyu-parcour/scheduler-augmentation">[Code]</a>
-* <small>\* Equal Contribution</small>
+* **Authors:** Sam Westrick<sup>\*</sup>, **Darshan Dinesh Kumar**<sup>\*</sup>, and Seong-Heon Jung<sup>\*</sup> (\* Equal Contribution)
+* **Venue:** *ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)*, July 2026, London, UK
+* **Links:** <a href="https://spaa.acm.org/papers-accepted-to-spaa-2026/">[Paper]</a> <a href="https://github.com/nyu-parcour/scheduler-augmentation">[Code]</a>
+<!-- * <small>\* Equal Contribution</small> -->
 
 ---
 
